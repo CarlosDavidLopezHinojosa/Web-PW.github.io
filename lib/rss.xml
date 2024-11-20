@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Apuntes para PW]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Apuntes para PW</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Wed, 20 Nov 2024 17:26:31 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Wed, 20 Nov 2024 17:26:30 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[2. Fundamentos de Internet]]></title><description><![CDATA[ 
+ <br>En esta sección nos meteremos en las entrañas de la Web y como funcionan los protocolos, direccionamiento y el lenguaje de la Web.<br><br>Internet es un conjunto de redes físicas heterogéneas, interconectadas mediante protocolo TCP/IP.<br><img alt="Pasted image 20241120161323.png" src="includes/pasted-image-20241120161323.png"><br><br>
+<br>Es un protocolo muy sencillo de envio de datos entre 2 máquinas
+<br>Cada dispositivo tiene una dirección de 32 bits separada en 4 bloque de 8 bits  en IPV4.
+<br><img alt="Pasted image 20241120161850.png" src="includes/pasted-image-20241120161850.png"><br>
+<br>IETF (Internet Engineering Task Force) e IANA (Internet Assigned Numbers Authority) tienen reservadas direcciones IP para fines concretos.
+<br><br><br>TCP garantiza la entrega de los mensajes sobre IP, en contraposición a UDP (User Datagram Protocol)<br>TCP/IP utiliza multiplexado múltiples aplicaciones utilizando la misma dirección IP <br>
+<br>Se asigna un número de puerto a cada programa o servicio, que en general es accedido mediante socket de red.
+<br>Puertos:<br>
+Del  a  () se denominan puestos del sistema.<br>
+<br>21: FTP (file transfer protocol).
+<br>22: SSH (secure shell).
+<br>23: Telnet.
+<br>25: email.
+<br>53: DNS (domain name server).
+<br>80: HTTP (hypertext transfer protocol).
+<br>443: HTTP sobre TLS/SSL (HTTPS).
+<br>990: FTPS (FTP sobre TLS/SSL).
+<br>992: Telnet sobre TLS/SSL.
+<br>De  a   son puertos reservados a demanda de las entidades.<br>
+<br>1433: MS SQL Server 
+<br>1521: Oracle listener 
+<br>3306: MySQL 
+<br>3690: Subversion 
+<br>5400,5500,5600,5700,5800,5900: VNC (escritorio remoto sobre HTTP) 
+<br>8000: iRDMI (Intel Remote Desktop Management Interface) 
+
+<br>Utilizado erróneamente como puerto HTTP, lo que supone un riesgo de amenaza
+
+
+<br>8080: HTTP alternativo
+<br><a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers" rel="noopener nofollow" class="external-link" href="https://en.wikipedia.org/wiki/List_of_TCP_and_UDP_port_numbers" target="_blank">Más puertos</a><br>
+<a data-tooltip-position="top" aria-label="http://es.adminsub.net/tcp-udp-port-finder" rel="noopener nofollow" class="external-link" href="http://es.adminsub.net/tcp-udp-port-finder" target="_blank">Buscador de Puertos, ¡Ayuda a encontrar amenzas!</a><br><br>
+<br>Implementación de la transparencia de nombrado ofrecida por sistemas distribuidos.
+<br>Conjunto de servidores que mapean nombres a direcciones IP.
+<br><img alt="Pasted image 20241120170509.png" src="includes/pasted-image-20241120170509.png"><br><a data-tooltip-position="top" aria-label="https://whois.domaintools.com/" rel="noopener nofollow" class="external-link" href="https://whois.domaintools.com/" target="_blank">Para ver la correspondencia de Ip nombre y viceversa (WhoIs)</a><br>Dentro nuestro propio sistema modificando el fichero etc/host/ podemos redireccionar los nombre de dominio a una determinada dirección Ip.<br>
+<br>Sistemas Windows: C:\Windows\System32\drivers\etc\hosts 
+<br>Sistemas MacOS: /private/etc/hosts 
+<br>Sistemas Unix/Linux: /etc/hosts 
+<br>Sistemas Android: /system/etc/hosts
+<br>Hay que tener cuidado al modficar estos ficheros ya que alguien que pueda acceder a nuestro sistema (malicioso), modificar este fichero y redirigir un nombre de dominio que suponemos seguro a uno que ha creado para robar tus datos personales pishing.<br>Gráfica de crecimiento de uso de DNS:<br><img alt="Pasted image 20241120171425.png" src="includes/pasted-image-20241120171425.png"><br><br>
+<br>Cadena de caracteres que sirve como localizador, nombre, o ambos 
+<br>Identificación no ambigua de un recurso concreto, definiendo un espacio de nombres separados de forma jerárquica 
+<br>RFC 3986 <a data-tooltip-position="top" aria-label="https://tools.ietf.org/html/rfc3986" rel="noopener nofollow" class="external-link" href="https://tools.ietf.org/html/rfc3986" target="_blank">Generic Syntax</a> 
+<br>Utilizada para definir el acceso único y no ambiguo de cualquier recurso: 
+
+<br>direcciones de páginas web, datos o ítems de la web semántica, servicios y APIs, etc.
+
+
+<br>Ejemplos:<br>ftp://ftp.is.co.za/rfc/rfc1808.txt 
+
+ldap://[2001:db8::7]/c=GB?objectClass?one 
+
+mailto:John.Doe@anexample.com 
+
+telnet://192.0.2.16:80/ 
+
+http://www.jrromero.net
+<br>El esquema se especifica como cadena de caracteres no vacía y minúscula (http, https, ftp, telnet, mailto, etc.), al fin y al cabo se trata del protocolo a usar.<br><img alt="Pasted image 20241120172725.png" src="includes/pasted-image-20241120172725.png"><br>Componente de autoridad compuesto por: <br>
+<br>usuario + “:” + password
+<br>Host: nombre de servidor o dirección IP en notación decimal con puntos 
+<br>Número de puerto
+<br>Ruta (path): separada por segmentos “/”. Puede ser vacía y debe corresponderse con la ruta del sistema de ficheros (no necesariamente 1:1).<br>Un componente de consulta (query) con una cadena de consulta sobre datos no jerárquicos. No está estandarizado su formato, si bien es habitual la secuencia<br>
+de tipo “?clave1=valor1&amp;clave2=valor2”<br>
+<br>Utilizado en el caso de paso de parámetros por método GET. 
+<br>Los caracteres están reservados como delimitadores: : / ? # [ ] @
+<br>Un componente fragmento, que contiene un identificador de un recurso secundario, como anclas (anchors) en secciones de HTML.<br><img alt="Pasted image 20241120174119.png" src="includes/pasted-image-20241120174119.png"><br><br>
+<br>El protocolo determina el resto de la estructura 
+<br>El dominio del servidor es mapeado por el DNS a su dirección IP 
+<br>Al ser protocolo HTTP, el puerto por defecto (según ICANN) es 80 
+<br>La ruta finaliza en un directorio, por lo que el recurso invocado por defecto es determinado en la parte de servidor (index.php, index.jsp, index.html, …)
+<br><br>
+<br>
+Establece el conjunto de comandos interpretados por el servidor web 
+
+<br>
+Creado inicialmente por Tim Bernes-Lee en el CERN (1989) 
+
+<br>
+Actualmente, coordinado y desarrollado por IETF y el W3C (World Wide Web Consortium) 
+
+<br>
+La versión más reciente – HTTP/3 – se liberó en Junio de 2022 
+
+<br>RFC 9114 <a data-tooltip-position="top" aria-label="https://www.rfc-editor.org/rfc/rfc9114" rel="noopener nofollow" class="external-link" href="https://www.rfc-editor.org/rfc/rfc9114" target="_blank">"Hypertext Transfer Protocol Version 3 (HTTP/3)"</a>
+
+
+<br>
+La mayoría de los navegadores ya lo soportaban desde hace algún tiempo 
+
+<br>
+Trabaja sobre TLS (Transport Layer Security) 1.3 o superior + UDP 
+
+<br>RFC 7301 <a data-tooltip-position="top" aria-label="https://tools.ietf.org/html/rfc7301" rel="noopener nofollow" class="external-link" href="https://tools.ietf.org/html/rfc7301" target="_blank">“Transport Layer Security (TLS) Application-Layer Protocol Negotiation Extension”</a>
+
+
+<br><br>Peticiones de Seguras (sólo lectura) – no alteran el estado del servidor:<br>
+<br>GET: Devuelve el recurso identificado por el Request-URI.
+<br>OPTIONS: Retorna las opciones de comunicación disponibles por el servidor (server capabilities).
+<br>HEAD: Inspecciona la cabecera del recurso (no devuelve el BODY).
+<br>Peticiones Idempotentes una solicitud idéntica puede realizarse múltiples veces, devolviendo siempre el mismo resultado:<br>
+<br>PUT:  Solicita al servidor guardar el cuerpo de la solicitud en la ubicación dada por la URL
+<br>DELETE:  Solicita al servidor que elimine el recurso en la URL dada.
+<br><img alt="Pasted image 20241120181443.png" src="includes/pasted-image-20241120181443.png"><br>Peticiones No Idempotentes realizar múltiples peticiones idénticas podría causar efectos adicionales (p.ej. enviar varias veces una orden):<br>
+<br>POST: Envío de información al servidor (p.ej. información de un formulario).
+<br>PACHT: Solicita un conjunto de cambios (parciales) descritos en la entidad identificada por la Request-URI
+<br><img alt="Pasted image 20241120181517.png" src="includes/pasted-image-20241120181517.png"><br>Otras peticiones: <br>
+<br>CONNECT:  Utilizado por cliente para establecer una conexión sin cierre con el servidor 
+<br>TRACE: Realiza una prueba de eco de retorno (muy utilizado para depuración, medición de latencias y desarrollo)
+<br><br>Peticiones Cacheables:<br>
+<br>
+GET:
+
+<br>Propósito: Recuperar información sin modificar el estado del servidor.
+<br>Es la petición más comúnmente cacheable, ya que su naturaleza es idempotente (repetirla produce el mismo resultado).
+<br>Ejemplo: Solicitar imágenes, archivos CSS, o recursos de API.
+
+
+<br>
+HEAD:
+
+<br>Similar a GET, pero solo recupera los encabezados sin el cuerpo de la respuesta.
+<br>Cacheable bajo las mismas condiciones que GET.
+
+
+<br><img alt="Pasted image 20241120181624.png" src="includes/pasted-image-20241120181624.png"><br>Peticiones No Cacheables:<br>
+<br>
+POST:
+
+<br>Propósito: Enviar datos al servidor para que se procesen.
+<br>Por diseño, las respuestas a estas peticiones no son cacheables porque podrían cambiar el estado del servidor y no son idempotentes.
+
+
+<br>
+PUT, DELETE, PATCH:
+
+<br>Estas peticiones modifican o eliminan datos en el servidor.
+<br>No son cacheables porque afectan directamente el estado del recurso.
+
+
+<br><a data-tooltip-position="top" aria-label="https://developer.mozilla.org/es/docs/Web/HTTP/Caching" rel="noopener nofollow" class="external-link" href="https://developer.mozilla.org/es/docs/Web/HTTP/Caching" target="_blank">Más información de los métodos HTTP</a><br><br>Los códigos de estado son identificadores y metainformación asociados a la respuesta (Response) HTTP recibida por el servidor.<br>Tipos de códigos: <br>
+<br>1xx : Códigos informativos 
+<br>2xx : Códigos de éxito 
+<br>3xx : Códigos de redirección 
+<br>4xx : Códigos de error en cliente 
+<br>5xx : Códigos de error en servidor
+<br><img alt="Pasted image 20241120182139.png" src="includes/pasted-image-20241120182139.png"><br><br>Forma estándar de indicar la naturaleza y formato de un recurso<br>Los tipos de medios se dividen en categorías: <br>
+<br>application, audio, font, example, image, message, model, multipart, text, video.
+<br><a data-tooltip-position="top" aria-label="https://www.iana.org/assignments/media-types/media-types.xhtml" rel="noopener nofollow" class="external-link" href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank">El listado completo de tipos en IANA</a>
+<br><img alt="Pasted image 20241120182429.png" src="includes/pasted-image-20241120182429.png">]]></description><link>2.-fundamentos-de-internet.html</link><guid isPermaLink="false">2. Fundamentos de Internet.md</guid><pubDate>Wed, 20 Nov 2024 17:24:40 GMT</pubDate><enclosure url="includes/pasted-image-20241120161323.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;includes/pasted-image-20241120161323.png&quot;&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
