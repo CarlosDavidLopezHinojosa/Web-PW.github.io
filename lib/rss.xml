@@ -1,155 +1,9 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Apuntes para PW]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Apuntes para PW</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 21 Nov 2024 10:10:51 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 21 Nov 2024 10:10:51 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[index]]></title><description><![CDATA[ 
- <br>]]></description><link>includes/index.html</link><guid isPermaLink="false">includes/index.md</guid><pubDate>Wed, 20 Nov 2024 15:05:27 GMT</pubDate></item><item><title><![CDATA[3. Tipología de la Web]]></title><description><![CDATA[ 
- <br>En esta sección de la asignatura vamos a ver la estructura general de la web así como el navegador y los diferentes tipos de localizaciones.<br><br>En general sigue la estructura cliente-servidor (C/S)<br>
-<br>El navegador web hace de cliente que envia requests.
-<br>El servidor web hace de servidor que responde las request con responses.
-<br>No olvidemos el componente de la red.
-<br><img alt="Pasted image 20241121082915.png" src="includes/pasted-image-20241121082915.png"><br><br>El navegador Web como Cliente:<br>
-<br>
-El navegador web es el encargado de interpretar el lenguaje del lado del cliente, normalmente recibido en HTTP Response, y de renderizar la salida.
-
-<br>
-El usuario generará eventos que se resolveran con código del cliente (Validación de credenciales) o generando peticiones HTTP al servidor.
-
-<br>
-El cliente más habitual es el navegador.
-
-<br>El navegador web como Herramienta de Desarrollo:<br>
-<br>Los navegadores actuales sirven como suites de desarrollo avanzadas, que es recomendable dominar.
-<br>Inspección de código, depuración, medición de carga y tiempos, uso de memoria, edición, etc.
-<br><img alt="Pasted image 20241121083801.png" src="includes/pasted-image-20241121083801.png"><br>Para inspeccionar una página web puedes pulsar ctrl + shift + I.<br><br>En primer lugar se nos presentan dos formas de representar la web, similares pero con sus diferencias:<br>SItio Web VS Portal Web:<br>
-<br>
-Sitio Web: Su objetivo es capturar gran cantidad de tráfico y ser visto, por que representa facilidad para el usuario.
-
-<br>
-Portal Web: Su objetivo es limitar el tráfico al grupo adecuado de usuarios, a los que se les proporcionan servicios.
-
-<br><br>Toda solicitud igual al servidor (HTTP Request) devuelve el mismo contenido implementado (hard coded) para ese mismo recurso, no distingue entre usuario siempre dará la misma respuesta HTTP, un ejemplo muy simple y burdo es que cuando se inicie sesión en un página web todos los usuarios tendrán la misma vista.<br><img alt="Pasted image 20241121090221.png" src="includes/pasted-image-20241121090221.png"><br>Ventajas: <br>
-<br>Muy útil si el número de páginas es pequeño y no hay necesidad de personalizar el contenido a cada usuario.
-
-<br>La respuesta va acompañada de un código 200 OK si todo va bien o 400 Not Found en caso de no existir dicho recurso.
-<br>Solo necesita un servidor web que procese peticiones GET.
-
-
-<br>Incovenientes:<br>
-<br>Muy ineficiente si se prevé un crecimiento en el número de variaciones de respuestas (p.ej. incremento de productos en un catálogo, ya que cada producto individual implica una página).
-
-<br>Debe vigilarse el esfuerzo de mantenimiento.
-
-
-<br><br>La respuesta devuelta por el servidor (HTTP Response) se genera para cada petición en base a los datos específicos del HTTP Request.<br>Por ejemplo, si el catálogo está almacenado, la solicitud identificará el ID del producto, que se buscará en la base de datos (no son páginas individuales pre-creadas) y se construirá dinámicamente la respuesta al cliente insertando los datos en una plantilla de HTML. <br>
-<br>Una plantilla (HTML template) puede generar miles de páginas 
-<br>Fácilmente extensible, modificable 
-<br>Fácil de implementar servicios de búsqueda 
-<br>Necesita la instalación de un servidor de aplicaciones para construir las páginas a partir de las plantillas
-<br><img alt="Pasted image 20241121091227.png" src="includes/pasted-image-20241121091227.png"><br>Los servidores de aplicaciones reciben una solicitud GET/POST y construyen dinámicamente el recurso que sirve de respuesta HTTP.<br>
-<br>
-No sólo generan HTML, también pueden generar otros tipos de medios, como texto, ficheros PDF, CSV, JSON, XML, etc. 
-
-<br>
-Permiten gestionar la redundancia de datos 
-
-<br>
-Ofrecen características adicionales: alta disponibilidad, balanceo de carga, gestión de usuarios y permisos de acceso, seguridad, gestión centralizada, gestión de caché, etc. 
-
-<br>
-Constituyen un modelo de capa de servicio, por lo que ayudan a los desarrolladores web a focalizarse en la lógica de negocio 
-
-<br>Se desarrolla en lenguajes tipo Java (J2EE), .NET, PHP, etc.
-
-
-<br><a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/List_of_application_servers" rel="noopener nofollow" class="external-link" href="https://en.wikipedia.org/wiki/List_of_application_servers" target="_blank">Variedad de servidores de aplicaciones – según lenguaje:</a> <br>
-<br>En el lado de cliente, javascript es el lenguaje más utilizado.
-<br>En el lado de servidor, Java (J2EE – Java 2 Enterprise Edition) es el lenguaje más utilizado en sitios empresariales.
-<br>Es importante conocer no sólo las características del lenguaje (incluyendo posibles frameworks de desarrollo), sino también las del servidor de aplicaciones.
-<br><br>Comparativa de el uso de servidores web en del último año:<br><img alt="Pasted image 20241121090540.png" src="includes/pasted-image-20241121090540.png"><br><br>Una aplicación web es un programa que es accesible utilizando cualquier navegador web (p.ej. Google Docs, Google Analytics, Adobe Color CC, etc.).<br>En general, en la aplicación web el usuario final interactúa con acciones: <br>
-<br>
-No es exclusivo con respecto a Sitio web, ya que un sitio puede proveer determinados servicios a sus usuarios en localizaciones concretas del mismo (la aplicación web puede ser parte de un sitio web) 
-
-<br>
-En la aplicación web, gran parte del trabajo se realiza en el cliente a diferencia del sitio web que la mayoría se realiza en el servidor.
-
-<br>
-En las aplicaciones web, la transferencia C/S es mayoritariamente de datos a diferencia del sitio web que se transfieren páginas renderizadas (datos + interfaz usuario).
-
-<br>Las aplicaciones web suelen ofrecer una experiencia de usuario más ágil y rápida 
-<br>Los sitios web están mejor posicionados para SEO (Search Engine Optim.)
-
-
-<br><img alt="Pasted image 20241121101131.png" src="includes/pasted-image-20241121101131.png"><br><br>
-<br>
-Especificidad: Una aplicación web va destinada a un conjunto concreto de usuarios finales, lo que marcará su diseño e interacción.
-
-<br>
-Interactividad: Dada la gran cantidad de datos que manipulan, debe ofrecerse una experiencia de usuario ágil y eficaz para el objetivo del usuario.
-
-<br>
-Integración: La aplicación será un componente dentro de un sistema mayor, intercomunicándose con el resto de elementos (p.ej. Google Docs en Google Suite).
-
-<br>
-Autenticación: El usuario que realiza la acciones sobre los datos debe obtener los permisos para acceder a la información.
-
-<br>
-Complejidad: Las tareas que desarrollan las aplicaciones web van más allá que la interacción, tratándose de acciones complejas focalizadas en un dominio de aplicación (especificidad).
-
-<br>
-Precompilación: La aplicación web debe compilarse antes de su despliegue, frente al uso de plantillas de los sitios web dinámicos.
-
-<br>
-Despliegue: Los cambios pueden afectar a todo el proyecto: mayor esfuerzo de prueba (test) y mantenimiento.
-
-<br><br>Una SPA es un tipo de aplicación web de cliente grueso, que no requiere recarga de la página durante su uso (p.ej. Gmail), y aprovecha tecnologías AJAX y de micro-servicios.<br><img alt="Pasted image 20241121102053.png" src="includes/pasted-image-20241121102053.png"><br>Ventajas:<br>
-<br>Carga Rápida.
-<br>Desarrollo más simple y fácil de depurar.
-<br>Permite transformar a una aplicación móvil.
-<br>Puede guardar datos en caché de forma efectiva.
-<br>Inconvenientes: <br>
-<br>En caso de optimización SEO, es preferible la renderización en el lado del servidor – mayor dificultad de desarrollo.
-<br>SPA es menos seguro (p.ej. cross-site scripting, XSS).
-<br>Puede presentar problemas en la pila de memoria en Javascript, que ralentice la aplicación.
-<br><img alt="Pasted image 20241121102318.png" src="includes/pasted-image-20241121102318.png"><br><br>Un servicio web es un punto de acceso a una función software máquina-máquina y que es referenciable mediante URL. <br>Un servicio web tiene una interfaz, encargada de esconder los detalles de implementación (hardware, software, dependencias, lenguajes de programación, etc.) y definir el formato de datos y el acceso a los mismos.<br>
-<br>Un servicio web es débilmente acoplado.
-<br>Un servicio web es un componente.
-<br>Un servicio web es independiente de la implementación.
-<br>Los servicios pueden ser utilizados junto con otros servicios, proveyendo múltiples interfaces que constituyen una API, y permiten llevar a cabo transacciones complejas.<br>La esencia de los servicios web es la Reutilización.<br>
-<br>Aligera las aplicaciones web – desarrollo, mantenimiento, etc. 
-<br>Los servicios pueden ser de desarrollo propio o de terceros y se vinculan dinámicamente en ejecución, lo que facilita su disponibilidad y reemplazo.
-<br>Los servicios web permiten el pago por uso y limitación de acceso.
-<br><br>Servicios SOAP (Single-Object Access Protocol):<br>Funcionan sobre HTTP y otros protocolos (FTP, TCP, colas, etc.).<br>
-<br>
-Estructuran sus mensajes en XML, con E/S fuertemente tipadas a los tipos básicos (¿limitante?).
-
-<br>
-Ventaja: toda la firma está bien definida: namespace, métodos (signatura completa), tipos y limitaciones, metadatos, etc. en formato WSDL (Web Service Definition Language).
-
-<br>
-Desventaja: No es adecuado en aplicaciones que requieran un alto desempeño.
-
-<br>Servicios REST (Representational State Transfer): <br>Funcionan únicamente sobre HTTP con métodos GET, POST, PUT, DELETE (operaciones CRUD) <br>
-<br>
-Ofrece una semántica mejor definida, con operaciones ligadas a los Endpoint o Estructura flexible de los mensajes, no fuertemente tipados, lo que permite comunicar múltiples formatos y tipos de medios 
-
-<br>
-Ventajas: Servicios más livianos e interpretado de forma natural en lenguajes como Javascript → Adoptado en Cloud.
-
-<br>
-Desventaja: Posibles errores en el caso de implementaciones con lenguajes fuertemente tipados (Java, C#) 
-
-<br>
-REST utiliza los métodos HTTP de forma explícita, ofreciendo servicios sin estado.
-
-<br>
-Permite exponer las URIs como una estructura de directorios, siendo la base de una API/REST.
-
-<br>
-Transfieren los datos de la respuesta en formato XML, JSON (JavaScript Object Notation), o ambos.
-
-<br><img alt="Pasted image 20241121110050.png" src="includes/pasted-image-20241121110050.png">]]></description><link>3.-tipología-de-la-web.html</link><guid isPermaLink="false">3. Tipología de la Web.md</guid><pubDate>Thu, 21 Nov 2024 10:00:54 GMT</pubDate><enclosure url="includes/pasted-image-20241121082915.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="includes/pasted-image-20241121082915.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Apuntes para PW]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Apuntes para PW</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 21 Nov 2024 10:14:32 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 21 Nov 2024 10:14:32 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[index]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-href="2. Fundamentos de Internet" href="2.-fundamentos-de-internet.html" class="internal-link" target="_self" rel="noopener nofollow">2. Fundamentos de Internet</a>
 <br><a data-href="3. Tipología de la Web" href="3.-tipología-de-la-web.html" class="internal-link" target="_self" rel="noopener nofollow">3. Tipología de la Web</a>
-<br>
-]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Wed, 20 Nov 2024 17:50:36 GMT</pubDate></item><item><title><![CDATA[2. Fundamentos de Internet]]></title><description><![CDATA[ 
+]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Thu, 21 Nov 2024 10:14:29 GMT</pubDate></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br>]]></description><link>includes/index.html</link><guid isPermaLink="false">includes/index.md</guid><pubDate>Wed, 20 Nov 2024 15:05:27 GMT</pubDate></item><item><title><![CDATA[2. Fundamentos de Internet]]></title><description><![CDATA[ 
  <br>En esta sección nos meteremos en las entrañas de la Web y como funcionan los protocolos, direccionamiento y el lenguaje de la Web.<br><br>Internet es un conjunto de redes físicas heterogéneas, interconectadas mediante protocolo TCP/IP.<br><img alt="Pasted image 20241120161323.png" src="includes/pasted-image-20241120161323.png"><br><br>
 <br>Es un protocolo muy sencillo de envio de datos entre 2 máquinas
 <br>Cada dispositivo tiene una dirección de 32 bits separada en 4 bloque de 8 bits  en IPV4.
@@ -298,4 +152,149 @@ PUT, DELETE, PATCH:
 <br><img alt="Pasted image 20241120182139.png" src="includes/pasted-image-20241120182139.png"><br><br>Forma estándar de indicar la naturaleza y formato de un recurso<br>Los tipos de medios se dividen en categorías: <br>
 <br>application, audio, font, example, image, message, model, multipart, text, video.
 <br><a data-tooltip-position="top" aria-label="https://www.iana.org/assignments/media-types/media-types.xhtml" rel="noopener nofollow" class="external-link" href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank">El listado completo de tipos en IANA</a>
-<br><img alt="Pasted image 20241120182429.png" src="includes/pasted-image-20241120182429.png">]]></description><link>2.-fundamentos-de-internet.html</link><guid isPermaLink="false">2. Fundamentos de Internet.md</guid><pubDate>Wed, 20 Nov 2024 17:24:40 GMT</pubDate><enclosure url="includes/pasted-image-20241120161323.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="includes/pasted-image-20241120161323.png"&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
+<br><img alt="Pasted image 20241120182429.png" src="includes/pasted-image-20241120182429.png">]]></description><link>2.-fundamentos-de-internet.html</link><guid isPermaLink="false">2. Fundamentos de Internet.md</guid><pubDate>Wed, 20 Nov 2024 17:24:40 GMT</pubDate><enclosure url="includes/pasted-image-20241120161323.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="includes/pasted-image-20241120161323.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[3. Tipología de la Web]]></title><description><![CDATA[ 
+ <br>En esta sección de la asignatura vamos a ver la estructura general de la web así como el navegador y los diferentes tipos de localizaciones.<br><br>En general sigue la estructura cliente-servidor (C/S)<br>
+<br>El navegador web hace de cliente que envia requests.
+<br>El servidor web hace de servidor que responde las request con responses.
+<br>No olvidemos el componente de la red.
+<br><img alt="Pasted image 20241121082915.png" src="includes/pasted-image-20241121082915.png"><br><br>El navegador Web como Cliente:<br>
+<br>
+El navegador web es el encargado de interpretar el lenguaje del lado del cliente, normalmente recibido en HTTP Response, y de renderizar la salida.
+
+<br>
+El usuario generará eventos que se resolveran con código del cliente (Validación de credenciales) o generando peticiones HTTP al servidor.
+
+<br>
+El cliente más habitual es el navegador.
+
+<br>El navegador web como Herramienta de Desarrollo:<br>
+<br>Los navegadores actuales sirven como suites de desarrollo avanzadas, que es recomendable dominar.
+<br>Inspección de código, depuración, medición de carga y tiempos, uso de memoria, edición, etc.
+<br><img alt="Pasted image 20241121083801.png" src="includes/pasted-image-20241121083801.png"><br>Para inspeccionar una página web puedes pulsar ctrl + shift + I.<br><br>En primer lugar se nos presentan dos formas de representar la web, similares pero con sus diferencias:<br>SItio Web VS Portal Web:<br>
+<br>
+Sitio Web: Su objetivo es capturar gran cantidad de tráfico y ser visto, por que representa facilidad para el usuario.
+
+<br>
+Portal Web: Su objetivo es limitar el tráfico al grupo adecuado de usuarios, a los que se les proporcionan servicios.
+
+<br><br>Toda solicitud igual al servidor (HTTP Request) devuelve el mismo contenido implementado (hard coded) para ese mismo recurso, no distingue entre usuario siempre dará la misma respuesta HTTP, un ejemplo muy simple y burdo es que cuando se inicie sesión en un página web todos los usuarios tendrán la misma vista.<br><img alt="Pasted image 20241121090221.png" src="includes/pasted-image-20241121090221.png"><br>Ventajas: <br>
+<br>Muy útil si el número de páginas es pequeño y no hay necesidad de personalizar el contenido a cada usuario.
+
+<br>La respuesta va acompañada de un código 200 OK si todo va bien o 400 Not Found en caso de no existir dicho recurso.
+<br>Solo necesita un servidor web que procese peticiones GET.
+
+
+<br>Incovenientes:<br>
+<br>Muy ineficiente si se prevé un crecimiento en el número de variaciones de respuestas (p.ej. incremento de productos en un catálogo, ya que cada producto individual implica una página).
+
+<br>Debe vigilarse el esfuerzo de mantenimiento.
+
+
+<br><br>La respuesta devuelta por el servidor (HTTP Response) se genera para cada petición en base a los datos específicos del HTTP Request.<br>Por ejemplo, si el catálogo está almacenado, la solicitud identificará el ID del producto, que se buscará en la base de datos (no son páginas individuales pre-creadas) y se construirá dinámicamente la respuesta al cliente insertando los datos en una plantilla de HTML. <br>
+<br>Una plantilla (HTML template) puede generar miles de páginas 
+<br>Fácilmente extensible, modificable 
+<br>Fácil de implementar servicios de búsqueda 
+<br>Necesita la instalación de un servidor de aplicaciones para construir las páginas a partir de las plantillas
+<br><img alt="Pasted image 20241121091227.png" src="includes/pasted-image-20241121091227.png"><br>Los servidores de aplicaciones reciben una solicitud GET/POST y construyen dinámicamente el recurso que sirve de respuesta HTTP.<br>
+<br>
+No sólo generan HTML, también pueden generar otros tipos de medios, como texto, ficheros PDF, CSV, JSON, XML, etc. 
+
+<br>
+Permiten gestionar la redundancia de datos 
+
+<br>
+Ofrecen características adicionales: alta disponibilidad, balanceo de carga, gestión de usuarios y permisos de acceso, seguridad, gestión centralizada, gestión de caché, etc. 
+
+<br>
+Constituyen un modelo de capa de servicio, por lo que ayudan a los desarrolladores web a focalizarse en la lógica de negocio 
+
+<br>Se desarrolla en lenguajes tipo Java (J2EE), .NET, PHP, etc.
+
+
+<br><a data-tooltip-position="top" aria-label="https://en.wikipedia.org/wiki/List_of_application_servers" rel="noopener nofollow" class="external-link" href="https://en.wikipedia.org/wiki/List_of_application_servers" target="_blank">Variedad de servidores de aplicaciones – según lenguaje:</a> <br>
+<br>En el lado de cliente, javascript es el lenguaje más utilizado.
+<br>En el lado de servidor, Java (J2EE – Java 2 Enterprise Edition) es el lenguaje más utilizado en sitios empresariales.
+<br>Es importante conocer no sólo las características del lenguaje (incluyendo posibles frameworks de desarrollo), sino también las del servidor de aplicaciones.
+<br><br>Comparativa de el uso de servidores web en del último año:<br><img alt="Pasted image 20241121090540.png" src="includes/pasted-image-20241121090540.png"><br><br>Una aplicación web es un programa que es accesible utilizando cualquier navegador web (p.ej. Google Docs, Google Analytics, Adobe Color CC, etc.).<br>En general, en la aplicación web el usuario final interactúa con acciones: <br>
+<br>
+No es exclusivo con respecto a Sitio web, ya que un sitio puede proveer determinados servicios a sus usuarios en localizaciones concretas del mismo (la aplicación web puede ser parte de un sitio web) 
+
+<br>
+En la aplicación web, gran parte del trabajo se realiza en el cliente a diferencia del sitio web que la mayoría se realiza en el servidor.
+
+<br>
+En las aplicaciones web, la transferencia C/S es mayoritariamente de datos a diferencia del sitio web que se transfieren páginas renderizadas (datos + interfaz usuario).
+
+<br>Las aplicaciones web suelen ofrecer una experiencia de usuario más ágil y rápida 
+<br>Los sitios web están mejor posicionados para SEO (Search Engine Optim.)
+
+
+<br><img alt="Pasted image 20241121101131.png" src="includes/pasted-image-20241121101131.png"><br><br>
+<br>
+Especificidad: Una aplicación web va destinada a un conjunto concreto de usuarios finales, lo que marcará su diseño e interacción.
+
+<br>
+Interactividad: Dada la gran cantidad de datos que manipulan, debe ofrecerse una experiencia de usuario ágil y eficaz para el objetivo del usuario.
+
+<br>
+Integración: La aplicación será un componente dentro de un sistema mayor, intercomunicándose con el resto de elementos (p.ej. Google Docs en Google Suite).
+
+<br>
+Autenticación: El usuario que realiza la acciones sobre los datos debe obtener los permisos para acceder a la información.
+
+<br>
+Complejidad: Las tareas que desarrollan las aplicaciones web van más allá que la interacción, tratándose de acciones complejas focalizadas en un dominio de aplicación (especificidad).
+
+<br>
+Precompilación: La aplicación web debe compilarse antes de su despliegue, frente al uso de plantillas de los sitios web dinámicos.
+
+<br>
+Despliegue: Los cambios pueden afectar a todo el proyecto: mayor esfuerzo de prueba (test) y mantenimiento.
+
+<br><br>Una SPA es un tipo de aplicación web de cliente grueso, que no requiere recarga de la página durante su uso (p.ej. Gmail), y aprovecha tecnologías AJAX y de micro-servicios.<br><img alt="Pasted image 20241121102053.png" src="includes/pasted-image-20241121102053.png"><br>Ventajas:<br>
+<br>Carga Rápida.
+<br>Desarrollo más simple y fácil de depurar.
+<br>Permite transformar a una aplicación móvil.
+<br>Puede guardar datos en caché de forma efectiva.
+<br>Inconvenientes: <br>
+<br>En caso de optimización SEO, es preferible la renderización en el lado del servidor – mayor dificultad de desarrollo.
+<br>SPA es menos seguro (p.ej. cross-site scripting, XSS).
+<br>Puede presentar problemas en la pila de memoria en Javascript, que ralentice la aplicación.
+<br><img alt="Pasted image 20241121102318.png" src="includes/pasted-image-20241121102318.png"><br><br>Un servicio web es un punto de acceso a una función software máquina-máquina y que es referenciable mediante URL. <br>Un servicio web tiene una interfaz, encargada de esconder los detalles de implementación (hardware, software, dependencias, lenguajes de programación, etc.) y definir el formato de datos y el acceso a los mismos.<br>
+<br>Un servicio web es débilmente acoplado.
+<br>Un servicio web es un componente.
+<br>Un servicio web es independiente de la implementación.
+<br>Los servicios pueden ser utilizados junto con otros servicios, proveyendo múltiples interfaces que constituyen una API, y permiten llevar a cabo transacciones complejas.<br>La esencia de los servicios web es la Reutilización.<br>
+<br>Aligera las aplicaciones web – desarrollo, mantenimiento, etc. 
+<br>Los servicios pueden ser de desarrollo propio o de terceros y se vinculan dinámicamente en ejecución, lo que facilita su disponibilidad y reemplazo.
+<br>Los servicios web permiten el pago por uso y limitación de acceso.
+<br><br>Servicios SOAP (Single-Object Access Protocol):<br>Funcionan sobre HTTP y otros protocolos (FTP, TCP, colas, etc.).<br>
+<br>
+Estructuran sus mensajes en XML, con E/S fuertemente tipadas a los tipos básicos (¿limitante?).
+
+<br>
+Ventaja: toda la firma está bien definida: namespace, métodos (signatura completa), tipos y limitaciones, metadatos, etc. en formato WSDL (Web Service Definition Language).
+
+<br>
+Desventaja: No es adecuado en aplicaciones que requieran un alto desempeño.
+
+<br>Servicios REST (Representational State Transfer): <br>Funcionan únicamente sobre HTTP con métodos GET, POST, PUT, DELETE (operaciones CRUD) <br>
+<br>
+Ofrece una semántica mejor definida, con operaciones ligadas a los Endpoint o Estructura flexible de los mensajes, no fuertemente tipados, lo que permite comunicar múltiples formatos y tipos de medios 
+
+<br>
+Ventajas: Servicios más livianos e interpretado de forma natural en lenguajes como Javascript → Adoptado en Cloud.
+
+<br>
+Desventaja: Posibles errores en el caso de implementaciones con lenguajes fuertemente tipados (Java, C#) 
+
+<br>
+REST utiliza los métodos HTTP de forma explícita, ofreciendo servicios sin estado.
+
+<br>
+Permite exponer las URIs como una estructura de directorios, siendo la base de una API/REST.
+
+<br>
+Transfieren los datos de la respuesta en formato XML, JSON (JavaScript Object Notation), o ambos.
+
+<br><img alt="Pasted image 20241121110050.png" src="includes/pasted-image-20241121110050.png">]]></description><link>3.-tipología-de-la-web.html</link><guid isPermaLink="false">3. Tipología de la Web.md</guid><pubDate>Thu, 21 Nov 2024 10:00:54 GMT</pubDate><enclosure url="includes/pasted-image-20241121082915.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="includes/pasted-image-20241121082915.png"&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
