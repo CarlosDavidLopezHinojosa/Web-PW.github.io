@@ -1,8 +1,4 @@
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Apuntes para PW]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Apuntes para PW</title><link/></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Thu, 21 Nov 2024 10:23:35 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Thu, 21 Nov 2024 10:23:35 GMT</pubDate><ttl>60</ttl><dc:creator/><item><title><![CDATA[index]]></title><description><![CDATA[ 
- <br><br>
-<br><a data-href="2. Fundamentos de Internet" href="2.-fundamentos-de-internet.html" class="internal-link" target="_self" rel="noopener nofollow">2. Fundamentos de Internet</a>
-<br><a data-href="3. Tipología de la Web" href="3.-tipología-de-la-web.html" class="internal-link" target="_self" rel="noopener nofollow">3. Tipología de la Web</a>
-]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Thu, 21 Nov 2024 10:14:29 GMT</pubDate></item><item><title><![CDATA[2. Fundamentos de Internet]]></title><description><![CDATA[ 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Apuntes para PW]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Apuntes para PW</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 23 Nov 2024 17:29:24 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 23 Nov 2024 17:29:20 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[2. Fundamentos de Internet]]></title><description><![CDATA[ 
  <br>En esta sección nos meteremos en las entrañas de la Web y como funcionan los protocolos, direccionamiento y el lenguaje de la Web.<br><br>Internet es un conjunto de redes físicas heterogéneas, interconectadas mediante protocolo TCP/IP.<br><img alt="Pasted image 20241120161323.png" src="includes/pasted-image-20241120161323.png"><br><br>
 <br>Es un protocolo muy sencillo de envio de datos entre 2 máquinas
 <br>Cada dispositivo tiene una dirección de 32 bits separada en 4 bloque de 8 bits  en IPV4.
@@ -151,7 +147,7 @@ PUT, DELETE, PATCH:
 <br><img alt="Pasted image 20241120182139.png" src="includes/pasted-image-20241120182139.png"><br><br>Forma estándar de indicar la naturaleza y formato de un recurso<br>Los tipos de medios se dividen en categorías: <br>
 <br>application, audio, font, example, image, message, model, multipart, text, video.
 <br><a data-tooltip-position="top" aria-label="https://www.iana.org/assignments/media-types/media-types.xhtml" rel="noopener nofollow" class="external-link" href="https://www.iana.org/assignments/media-types/media-types.xhtml" target="_blank">El listado completo de tipos en IANA</a>
-<br><img alt="Pasted image 20241120182429.png" src="includes/pasted-image-20241120182429.png">]]></description><link>2.-fundamentos-de-internet.html</link><guid isPermaLink="false">2. Fundamentos de Internet.md</guid><pubDate>Wed, 20 Nov 2024 17:24:40 GMT</pubDate><enclosure url="includes/pasted-image-20241120161323.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="includes/pasted-image-20241120161323.png"&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[3. Tipología de la Web]]></title><description><![CDATA[ 
+<br><img alt="Pasted image 20241120182429.png" src="includes/pasted-image-20241120182429.png">]]></description><link>2.-fundamentos-de-internet.html</link><guid isPermaLink="false">2. Fundamentos de Internet.md</guid><pubDate>Wed, 20 Nov 2024 17:24:40 GMT</pubDate><enclosure url="includes/pasted-image-20241120161323.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;includes/pasted-image-20241120161323.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[3. Tipología de la Web]]></title><description><![CDATA[ 
  <br>En esta sección de la asignatura vamos a ver la estructura general de la web así como el navegador y los diferentes tipos de localizaciones.<br><br>En general sigue la estructura cliente-servidor (C/S)<br>
 <br>El navegador web hace de cliente que envia requests.
 <br>El servidor web hace de servidor que responde las request con responses.
@@ -296,4 +292,80 @@ Permite exponer las URIs como una estructura de directorios, siendo la base de u
 <br>
 Transfieren los datos de la respuesta en formato XML, JSON (JavaScript Object Notation), o ambos.
 
-<br><img alt="Pasted image 20241121110050.png" src="includes/pasted-image-20241121110050.png">]]></description><link>3.-tipología-de-la-web.html</link><guid isPermaLink="false">3. Tipología de la Web.md</guid><pubDate>Thu, 21 Nov 2024 10:00:54 GMT</pubDate><enclosure url="includes/pasted-image-20241121082915.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src="includes/pasted-image-20241121082915.png"&gt;&lt;/figure&gt;</content:encoded></item></channel></rss>
+<br><img alt="Pasted image 20241121110050.png" src="includes/pasted-image-20241121110050.png">]]></description><link>3.-tipología-de-la-web.html</link><guid isPermaLink="false">3. Tipología de la Web.md</guid><pubDate>Thu, 21 Nov 2024 10:00:54 GMT</pubDate><enclosure url="includes/pasted-image-20241121082915.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;includes/pasted-image-20241121082915.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[4. Marcos Tecnológicos]]></title><description><![CDATA[ 
+ <br>En esta sección de la asignatura hablaremos de las terminología de la web, el stack que se suele usar y la disposición de algunos frameworks.<br><br>En desarrollo web, el término “pila de tecnología” (tech stack) se refiere al conjunto de herramientas, lenguajes y software que se emplea durante las fases de desarrollo y despliegue de un producto web o aplicación móvil.<br>En general la pila esta compuesta por la combinación de tecnologías que se usan en el lado del servidor (Back-End) y en el lado del cliente (Front-End).<br><img alt="Pasted image 20241123172129.png" src="includes/pasted-image-20241123172129.png"><br><br>Back-End:<br>
+<br>Contiene la lógica de negocio de la aplicación.
+<br>Nunca es accedido por el usuario directamente, sino a través del frontend.
+<br>Se desarrolla con lenguajes de programación como (Java, Ruby, PHP, ... ).
+<br>Front-End:<br>
+<br>Es la parte visual de la aplicación, interactúa con el usuario final.
+<br>Se usan lenguajes de marcado como HTML, CSS y lenguajes de programación como Javascript.
+<br><img alt="Pasted image 20241123174058.png" src="includes/pasted-image-20241123174058.png"><br><br>
+<br>LAMP: Linux – Apache – MySQL – PHP
+<br>ASP.NET: ASP.NET, IIS, Angular/TypeScript, SQL Server, MS Azure 
+<br>MEAN: MongoDB, Express.js, Angular.js, Node.js 
+<br>MERN: Idem con React para front (MEVN -&gt; vue.js) 
+<br>Java Stack: Java, Spring, Wildfly, Linux, NGINX  
+<br>JAM: Javascript + APIs + Markup (También Serverless stack)
+<br><br><br>Un framework es un software abstracto, que ofrece funciones genéricas para ser utilizadas o adaptadas por el código del desarrollador y facilitar así el desarrollo de aplicaciones específicas.<br>
+<br>
+Para considerarse framework, debe ser independiente del dominio de aplicación, universal y ofrecer un entorno reutilizable.
+
+<br>
+Puede ofrecer soporte adicional, como herramientas, APIs, librerías de código, etc.
+Características distintivas: 
+
+<br>
+Inversión de control: el flujo del sistema lo controla el framework (vs. APIs) 
+
+<br>
+Extensibilidad: El desarrollador podrá extender su funcionalidad 
+
+<br>
+Estabilidad: El código del framework es transparente al desarrollo, que no preverá cambios en el código que afecten a su aplicación 
+
+<br>
+Retrocompatibilidad: Debe garantizar la compatibilidad de la aplicación conforme evoluciona.
+
+<br><br>Un web framework (WF) es un framework software diseñado para el desarrollo de aplicaciones web a través de invocaciones a servicios web, APIs u otro tipo de recursos.<br>El objetivo principal delWF es el de automatizar partes del desarrollo web (p.ej. patrón MVC) y otras actividades comunes (p.ej. acceso a base de datos) que de otra forma deberían ser implementadas una y otra vez.<br>
+<br>
+Facilitan la reutilización de código 
+
+<br>
+Generalmente se utilizan para el desarrollo de sitios web dinámicos.
+
+<br>
+Los WF se diferencian según el lado en que se despliegan: WF de back-end y WF de front-end.
+
+<br><img alt="Pasted image 20241123180711.png" src="includes/pasted-image-20241123180711.png"><br><br>Sistema basado en plantillas (templates):<br>
+Mecanismos para la generación automática de documentos web a partir de un lenguaje de marcas – favoreciendo reutilización de código.<br>Gestión de caché:<br>
+Almacenamiento temporal de documentos, así como su actualización y gestión, con el fin de reducir el ancho de banda y los accesos al servidor de aplicaciones (mejorando la latencia).<br>Acceso a base de datos y gestión de objetos de datos:<br>
+Acceso a un amplio número de bases de datos sin implicar modificación en el código fuente de la aplicación, así como la creación de objetos de mapeo y correspondencia con el esquema de la base de datos (mediante objetos de clases o formatos tipos JSON o XML).<br>Funciones de seguridad:<br>
+Funciones de autenticación y autorización, así como listas de control de acceso a las funciones de la aplicación.<br>Enrutado:<br>
+Mecanismos para la interpretación, mapeo y redirección de URLs (friendly URL).<br>Programación asíncrona:<br>
+Encapsulan la dificultad de las técnicas de desarrollo de comunicación asíncrona con el servidor (AJAX – Asynchronous JavaScript and XML).<br>Generación de código:<br>
+Tanto a nivel de patrones arquitecturales (MVC) –incluyendo acceso a base de datos– como a nivel de plantillas.<br>Servicios web:<br>
+Encapsulación de creación y suministro de WS. <br>Integración: Mecanismos de integración con otros frameworks o herramientas (p.ej. con frameworks de pruebas tipo JUnit).<br><br>Desempeño del WF:<br>
+Tiempo de ejecución y carga del sitio. En general, este factor puede compensarse de otras formas en el despliegue (máquinas, balanceadores, proxy inverso u otro hardware o software base).<br>Escalabilidad:<br>
+Tanto escalabilidad vertical (cambiar a un hardware más potente) como escalabilidad horizontal (ampliar el número de servidores web y bases de datos) y/o geográfica (redistribuir los usuarios según su localización más cercana a un servidor).<br>Soporte de caché:<br>
+Permite soportar un mayor número de peticiones optimizando el documento (o parte del mismo) que se guarda la primera vez que se solicita para no ser generado de nuevo.<br>Seguridad web:<br>
+Resistencia frente a ataques y frecuencia de actualizaciones del WF al respecto.<br><img alt="Pasted image 20241123182242.png" src="includes/pasted-image-20241123182242.png"><br>Algunos WF populares son:<br>
+<br>*React
+<br>Angular
+<br>BackJone.js
+<br>Vue.js
+<br><br>Término referido a un WF minimalista, esto es, aquel que ofrece un subconjunto mínimo de funcionalidades necesario para el desarrollo de un proyecto web.<br>En general, un micro-WF ofrece las siguientes características mínimas: <br>
+<br>Control y gestión de solicitudes y respuestas HTTP 
+<br>Integración con APIs (ej. aplicaciones basadas en servicios) 
+<br>Pero no suele ofrecer las siguientes (salvo posibles extensiones): <br>
+<br>Seguridad. Gestión de cuentas, autenticación y autorización 
+<br>Validación de entradas 
+<br>Motor de plantillas (templates) 
+<br>Mapeo de objetos de acceso a datos
+]]></description><link>4.-marcos-tecnológicos.html</link><guid isPermaLink="false">4. Marcos Tecnológicos.md</guid><pubDate>Sat, 23 Nov 2024 17:27:04 GMT</pubDate><enclosure url="includes/pasted-image-20241123172129.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;includes/pasted-image-20241123172129.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+ <br><br>
+<br><a data-href="2. Fundamentos de Internet" href="2.-fundamentos-de-internet.html" class="internal-link" target="_self" rel="noopener nofollow">2. Fundamentos de Internet</a>
+<br><a data-href="3. Tipología de la Web" href="3.-tipología-de-la-web.html" class="internal-link" target="_self" rel="noopener nofollow">3. Tipología de la Web</a>
+<br><a data-href="4. Marcos Tecnológicos" href="4.-marcos-tecnológicos.html" class="internal-link" target="_self" rel="noopener nofollow">4. Marcos Tecnológicos</a>
+<br>
+]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Sat, 23 Nov 2024 16:19:23 GMT</pubDate></item></channel></rss>
