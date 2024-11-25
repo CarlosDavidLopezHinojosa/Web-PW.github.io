@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Apuntes para PW]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Apuntes para PW</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Sat, 23 Nov 2024 17:37:47 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Sat, 23 Nov 2024 17:37:42 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[2. Fundamentos de Internet]]></title><description><![CDATA[ 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Apuntes para PW]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Apuntes para PW</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 25 Nov 2024 23:21:12 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 25 Nov 2024 23:21:07 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[2. Fundamentos de Internet]]></title><description><![CDATA[ 
  <br>En esta sección nos meteremos en las entrañas de la Web y como funcionan los protocolos, direccionamiento y el lenguaje de la Web.<br><br>Internet es un conjunto de redes físicas heterogéneas, interconectadas mediante protocolo TCP/IP.<br><img alt="Pasted image 20241120161323.png" src="includes/pasted-image-20241120161323.png"><br><br>
 <br>Es un protocolo muy sencillo de envio de datos entre 2 máquinas
 <br>Cada dispositivo tiene una dirección de 32 bits separada en 4 bloque de 8 bits  en IPV4.
@@ -327,7 +327,7 @@ Estabilidad: El código del framework es transparente al desarrollo, que no prev
 <br>
 Retrocompatibilidad: Debe garantizar la compatibilidad de la aplicación conforme evoluciona.
 
-<br><br>Un web framework (WF) es un framework software diseñado para el desarrollo de aplicaciones web a través de invocaciones a servicios web, APIs u otro tipo de recursos.<br>El objetivo principal delWF es el de automatizar partes del desarrollo web (p.ej. patrón MVC) y otras actividades comunes (p.ej. acceso a base de datos) que de otra forma deberían ser implementadas una y otra vez.<br>
+<br><br>Un web framework (WF) es un framework software diseñado para el desarrollo de aplicaciones web a través de invocaciones a servicios web, APIs u otro tipo de recursos.<br>El objetivo principal del WF es el de automatizar partes del desarrollo web (p.ej. patrón MVC) y otras actividades comunes (p.ej. acceso a base de datos) que de otra forma deberían ser implementadas una y otra vez.<br>
 <br>
 Facilitan la reutilización de código 
 
@@ -362,9 +362,154 @@ Resistencia frente a ataques y frecuencia de actualizaciones del WF al respecto.
 <br>Validación de entradas 
 <br>Motor de plantillas (templates) 
 <br>Mapeo de objetos de acceso a datos
-]]></description><link>4.-marcos-tecnológicos.html</link><guid isPermaLink="false">4. Marcos Tecnológicos.md</guid><pubDate>Sat, 23 Nov 2024 17:32:13 GMT</pubDate><enclosure url="includes/pasted-image-20241123172129.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;includes/pasted-image-20241123172129.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+]]></description><link>4.-marcos-tecnológicos.html</link><guid isPermaLink="false">4. Marcos Tecnológicos.md</guid><pubDate>Mon, 25 Nov 2024 19:11:36 GMT</pubDate><enclosure url="includes/pasted-image-20241123172129.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;includes/pasted-image-20241123172129.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[5. Lenguajes para la Web]]></title><description><![CDATA[ 
+ <br>En esta sección hablaremos de los lenguajes de marcado como son el HTML, CSS y javascript, además de otros como también XML.<br><br><br>Es un formato sencillo y flexible utilizado fundamentalmente para el intercambio de datos en Web.<br><img alt="Pasted image 20241125201248.png" src="includes/pasted-image-20241125201248.png"><br>
+<br>Derivado de SGML (Standard Generalize MarkUp Language), que sin embargo resultó muy complejo para su interpretación y procesamiento por clientes web y aplicaciones.
+<br>Fijó las bases de los lenguajes de marcado, basado en etiquetas.
+<br>Especificación Declarativa, describiendo estructura y otros ámbitos del documento.
+<br>Es muy riguroso, por apertura y cerrado de etiquetas.
+<br>Es estándar libre y abierto de la W3C.
+<br>Es la base del desarrollo de API's.
+<br><img alt="Pasted image 20241125201847.png" src="includes/pasted-image-20241125201847.png"><br>message es el elemento raiz.<br>La estructura de un documento XML puede ser definido en un DTD (Document Type Definition) heredado de SGML, ya en desuso, actualmente se usa XSD.<br>
+<br>Ofrece un amplio sistema de tipos.
+<br>Permite definir restricciones sobre la estructura de los documentos.
+<br>XSD esta basado en XML (favorece su procesamiento).
+<br>Ventajas:<br>
+<br>Formato abierto y estándar.
+<br>Puede representar casi cualquier tipo de dato.
+<br>Fácil de leer por la máquina y por humanos.
+<br>Multitud de herramientas para su procesamiento.
+<br>Inconvenientes:<br>
+<br>Genera ficheros muy voluminosos que pueden empeorar el rendimiento.
+<br>Algunos datos pueden ser difíciles de encajar en un formato XML válido.
+<br>El código JS para navegar el árbol de etiquetas es muy voluminoso y tedioso.
+<br><br>Es el lenguaje de marcado basado en texto más utilizado en el lado de cliente, que sirve para desarrollar la estructura de una página web permitiendo:<br>
+<br>Publicar cabeceras, texto, tablas, imágenes, listados, etc...
+<br>Acceso a documentos en linea a través de hipervínculos.
+<br>Heredado de XML (XHTML) hasta  la extinción de HTML4.
+<br><img alt="Pasted image 20241125205932.png" src="includes/pasted-image-20241125205932.png"><br><br>
+<br>
+HTML se desarrolló en CERN, pasando posteriormente a la IETF durante los 5 primeros años (1990 – 1995).
+
+<br>
+Con la creación del W3C, adoptó HTML3 en 1995, avanzando hasta un modelo más pragmático – HTML 3.2 – en 1998.
+
+<br>
+La W3C vio la necesidad de evolucionar HTML hacia un lenguaje más estructurado basado en XML, obteniendo HTML4.
+
+<br>
+Surge XHTML 1.0 (HTML4) en 2000.
+
+<br>
+Sucesivas evoluciones de XML+HTML derivan en XHTML DOM Level 1 (1998), DOM Level 2 (2000-2003) y DOM Level 3 (2004).
+
+<br>
+XForms surge en 2003, para el desarrollo de formularios sin necesidad de recodificar los motores de renderizado de los navegadores.
+
+<br>
+El desarrollo de XML permite la especificación de nuevos formatos como RSS (después, Atom).
+
+<br>
+En el W3C Workshop 2004 se establecen las bases de HTML5, al que se unen Opera, Apple y Mozilla (que forman WHATWG) – su desarrollo se inició junto con W3C en 2007.
+
+<br>
+Aparece la recomendación de HTML5 en 2012 por la W3C, incluyendo información semántica en los documentos.
+
+<br>
+Aparece la especificación HTML de WHATWG (estado: Living Standard) en 2016.
+
+<br>
+En mayo de 2019, WHATWG y W3C firman un acuerdo para llevar una única especificación de HTML y DOM.
+
+<br><br>Creado en [1995]Es el lenguaje de hoja de estilos utilizado para la presentación del diseño gráfico de un documento escrito en el lenguaje HTML:<br>
+<br>Describe la estructura del diseño (layout), colores, fuentes y reglas de presentación.
+<br>Permite describir diferentes presentaciones para distintos dispositivos.
+<br>Múltiples documentos web pueden compartir el mismo diseño.
+<br><img alt="Pasted image 20241125205918.png" src="includes/pasted-image-20241125205918.png"><br>Métodos de aplicación:<br> En línea, utilizando el atributo style de HTML.<br>&lt;body style="background-color: #FF0000;"&gt;
+<br>Interno, incrustando CSS como contenido de la etiqueta.<br>&lt;style type="text/css"&gt;
+body {background-color: #FF0000;}
+&lt;/style&gt;
+<br>Externo, vinculando el documento HTML a un fichero de estilos externo con extensión .css.<br>&lt;link rel="stylesheet" type="text/css" href="style/style.css" /&gt;
+<br>CSS cubre tres aspectos diferentes de estilo y maquetación: <br>
+<br>Estilo del texto, incluyendo fuentes, colores de fuente, tipos de ítems de las enumeraciones, etc. 
+<br>Estilo de las cajas, considerando que todos los elementos de HTML son considerados como cajas con las siguientes propiedades:
+<br><img alt="Pasted image 20241125205603.png" src="includes/pasted-image-20241125205603.png"><br>Permite modificar el estilo y tamaño del contenido, relleno, borde, margen y caja<br>
+<br>Distribución de las cajas, permitiendo modificar su posición absoluta y relativa de una respecto a otras.
+<br><br> CSS define reglas que se aplican a un documento, y modifican el modo en que este es presentado.<br>Cada regla CSS se compone de: <br>
+<br>
+Conjunto de propiedades: valores establecidos para la presentación del documento HTML o Cada par propiedad-valor recibe el nombre de declaración.
+
+<br>
+Selector: “Seleccionador” de los elementos HTML afectados por el nuevo valor de la propiedad.
+
+<br><img alt="Pasted image 20241125205812.png" src="includes/pasted-image-20241125205812.png"><br><br>Es el lenguaje de programación del lado de cliente predominante.<br>Javascript permite desarrollar páginas web interactivas/reactivas (sitios dinámicos) en los que hay que integrar algún tipo de programación (ej. para validación de datos).<br>
+<br>Código escrito como scripts separados del contenido/estructura y diseño del documento web. 
+<br>Código puede ser incrustado en marcas HTML o vinculado desde un fichero separado del documento, que debe ser accesible al cliente.
+<br>El código se ejecuta en el cliente (navegador web) o en un entorno externo en el dispositivo del usuario.
+<br><img alt="Pasted image 20241126001750.png" src="includes/pasted-image-20241126001750.png"><br>Originalmente desarrollado (nombre del proyecto: Mocha) y liberado por Netscape en septiembre de [1995] bajo el nombre de LiveScript.<br>Javascript es un lenguaje multiparadigma, basado en prototipos y dinámico.<br>
+<br>
+Multiparadigma: Permite programación funcional (con funciones de primera clase), orientada a objetos e imperativa. 
+
+<br>
+Funciones de primera clase: Paradigma en el que las funciones son los elementos de primer nivel, permitiendo pasar funciones como argumentos de otras, funciones como valores de retorno y asignar funciones a variables.
+
+<br>
+Basado en prototipos (programación classless): Los objetos no se instancian, sino que se clonan (a partir de prototipos) o son programados explícitamente por el programador.
+
+<br>&lt;script src=“miscript.js"&gt;&lt;/script&gt;
+<br>var genericAnimal = Object.create(null); 
+genericAnimal.name = 'Animal’; 
+genericAnimal.gender = 'female’; 
+genericAnimal.description = function() { return 'Gender: ' + this.gender + ';                                                     Name: ' + this.name;}; 
+
+var cat = Object.create(genericAnimal); 
+cat.purr = function() { return 'Purrrr!'; };
+
+var colonel = Object.create(cat); 
+colonel.name = 'Colonel Meow’;
+
+var puff = Object.create(cat); 
+puff.name = 'Puffy';
+<br><br>DOM es una interfaz independiente del lenguaje y de la plataforma, que permite el acceso y actualización dinámica al contenido, estructura y estilo de los documentos a los lenguajes de script.<br>En Javascript, DOM es una API para documentos HTML y XML, que proporciona una representación estructural del documento <br>Permite manipular, crear, eliminar y cambiar el código de los elementos escritos en HTML y CSS aplicando valores dinámicos.<br>En DOM, los elementos de HTML son objetos:  <br>
+<br>Tiene las propiedades de todos los elementos HTML. 
+<br>Tiene métodos para acceder a todos los elementos 
+<br>Recoge los eventos para todos los elementos HTML.
+<br><img alt="Pasted image 20241126000026.png" src="includes/pasted-image-20241126000026.png"><br>El árbol DOM tiene 4 tipos de nodos: <br>
+<br>Nodo documento (página HTML completa) 
+<br>Nodo elemento 
+<br>Nodo atributo (en las etiquetas de inicio de HTML) 
+<br>Nodo texto (dentro de los elementos)
+<br>Javascript DOM permite consultas en los elementos HTML.<br>const elem = document.getDocumentById(“one” );
+<br>Recientemente, se han añadido las consultas de selectores CSS, lo que permite mayor flexibilidad, aunque no se garantiza que todos los navegadores sean compatibles.<br>const first_elem = document.querySelector (“li.one” );
+<br><img alt="Pasted image 20241126000303.png" src="includes/pasted-image-20241126000303.png"><br><br>JSON (JavaScript Object Notation)<br>Es un lenguaje de intercambio de datos ligero, basado en texto e independiente del lenguaje: <br>
+<br>Define un conjunto de reglas de formato para la representación de datos estructurados.
+<br>Derivado de ECMAScript.
+<br>Representa los datos como un conjunto de objectos de Javascript.
+<br>Popularizado por su uso en APIs y servicios web.
+<br>JSON es un estándar IETF (última actualización: dic. 2017).<br>{ "private": "true",
+ "from": { 
+    “id”: "alba@miempresa.es", 
+    “text”: “Alba Lopez” 
+  }, 
+  "to": { 
+      “id”: "Roberto@miempresa.es", 
+      “text”: “Roberto Manuel” 
+  }, 
+  "subject": "Mañana en mi fiesta de cumpleaños!", 
+  “content": { 
+     "language": “spanish", 
+     "text": "Oye, Roberto, no te olvides de llamarme para organizar la fiesta."    } 
+}
+<br>YAML (Yet Another MarkUp Language) [2006]<br>Es un lenguaje de serialización –legible por el humano– utilizado en general para ficheros de configuración: <br>
+<br>Es un lenguaje orientado a líneas (line-oriented) que ofrece puramente una representación de datos (no necesariamente estructurados) 
+<br>YAML no ofrece comandos (no es ejecutable) 
+<br>YAML no es un lenguaje de etiquetas (como XML) 
+<br>Utiliza una sintaxis mínima diferenciada de XML, más cercana al estilo de formato de Python.
+<br>Serializado en ficheros con extensión .yaml.
+]]></description><link>5.-lenguajes-para-la-web.html</link><guid isPermaLink="false">5. Lenguajes para la Web.md</guid><pubDate>Mon, 25 Nov 2024 23:17:58 GMT</pubDate><enclosure url="includes/pasted-image-20241125201248.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;includes/pasted-image-20241125201248.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-href="2. Fundamentos de Internet" href="2.-fundamentos-de-internet.html" class="internal-link" target="_self" rel="noopener nofollow">2. Fundamentos de Internet</a>
 <br><a data-href="3. Tipología de la Web" href="3.-tipología-de-la-web.html" class="internal-link" target="_self" rel="noopener nofollow">3. Tipología de la Web</a>
 <br><a data-href="4. Marcos Tecnológicos" href="4.-marcos-tecnológicos.html" class="internal-link" target="_self" rel="noopener nofollow">4. Marcos Tecnológicos</a>
-]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Sat, 23 Nov 2024 17:37:05 GMT</pubDate></item></channel></rss>
+<br><a data-href="5. Lenguajes para la Web" href="5.-lenguajes-para-la-web.html" class="internal-link" target="_self" rel="noopener nofollow">5. Lenguajes para la Web</a>
+]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Mon, 25 Nov 2024 19:00:49 GMT</pubDate></item></channel></rss>
