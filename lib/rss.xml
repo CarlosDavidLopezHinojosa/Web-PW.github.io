@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Apuntes para PW]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Apuntes para PW</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Mon, 25 Nov 2024 23:31:16 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Mon, 25 Nov 2024 23:31:11 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[2. Fundamentos de Internet]]></title><description><![CDATA[ 
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Apuntes para PW]]></title><description><![CDATA[Obsidian digital garden]]></description><link>http://github.com/dylang/node-rss</link><image><url>lib/media/favicon.png</url><title>Apuntes para PW</title><link></link></image><generator>Webpage HTML Export plugin for Obsidian</generator><lastBuildDate>Tue, 26 Nov 2024 17:57:46 GMT</lastBuildDate><atom:link href="lib/rss.xml" rel="self" type="application/rss+xml"/><pubDate>Tue, 26 Nov 2024 17:57:43 GMT</pubDate><ttl>60</ttl><dc:creator></dc:creator><item><title><![CDATA[2. Fundamentos de Internet]]></title><description><![CDATA[ 
  <br>En esta sección nos meteremos en las entrañas de la Web y como funcionan los protocolos, direccionamiento y el lenguaje de la Web.<br><br>Internet es un conjunto de redes físicas heterogéneas, interconectadas mediante protocolo TCP/IP.<br><img alt="Pasted image 20241120161323.png" src="includes/pasted-image-20241120161323.png"><br><br>
 <br>Es un protocolo muy sencillo de envio de datos entre 2 máquinas
 <br>Cada dispositivo tiene una dirección de 32 bits separada en 4 bloque de 8 bits  en IPV4.
@@ -506,10 +506,91 @@ puff.name = 'Puffy';
 <br>YAML no es un lenguaje de etiquetas (como XML) 
 <br>Utiliza una sintaxis mínima diferenciada de XML, más cercana al estilo de formato de Python.
 <br>Serializado en ficheros con extensión .yaml.
-]]></description><link>5.-lenguajes-para-la-web.html</link><guid isPermaLink="false">5. Lenguajes para la Web.md</guid><pubDate>Mon, 25 Nov 2024 23:30:43 GMT</pubDate><enclosure url="includes/pasted-image-20241125201248.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;includes/pasted-image-20241125201248.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
+<br>%YAML 1.1
+%TAG !u!
+
+header:
+  SerializedFile:
+    m_TargetPlatform: 4294967294
+    m_UserInformation:
+
+Scene:
+  m_ObjectHideFlags: 0
+  m_PVSData:
+  m_QueryMode: 1
+  m_PVSObjectsArray: []
+  m_PVSPortalsArray: []
+  m_ViewCellSize: 1.000000
+
+RenderSettings:
+  m_Fog: 0
+  m_FogColor: {r: 0.500000, g: 0.500000, b: 0.500000, a: 1.000000}
+  ...
+]]></description><link>5.-lenguajes-para-la-web.html</link><guid isPermaLink="false">5. Lenguajes para la Web.md</guid><pubDate>Mon, 25 Nov 2024 23:38:23 GMT</pubDate><enclosure url="includes/pasted-image-20241125201248.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;includes/pasted-image-20241125201248.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[6. Principios de Diseño y Arquitectura]]></title><description><![CDATA[ 
+ <br>En esta sección veremos algunos principios de diseño como los de Tim Berners-Lee, la arquitectura de la Web, sus diferentes modelos y servicios.<br><br>Estos son los principios de diseño pautados por Tim Berners-Lee para el desarrollo web:<br><img alt="Pasted image 20241126164312.png" src="includes/pasted-image-20241126164312.png"><br>Simplicidad:<br>
+"Keep it simple, stupid!“. No confundir con la facilidad de entender el diseño.<br>Modularidad:<br>
+Dividir nuestro sistema en un grupo de características cercanas y bien comunicadas.<br>Ser parte de un diseño modular:<br>
+Debemos considerar nuestro sistema como parte de otro sistema mayor, ofreciendo las interfaces apropiadas (más complejo que modularidad).<br>Tolerancia: “Be liberal in what you require but conservative in what you do”.<br>
+No implica llegar a romper más allá de lo necesario (ej. dejar de utilizar estándares).<br>Descentralización:<br>
+Se está diseñando un sistema distribuido para la sociedad: <br>
+<br>Cualquier punto común que esté involucrado en alguna otra operación tenderá a limitar la forma en que escala el sistema, y producirá un punto único de error total.
+<br>Test de invención: “If someone else had already invented your system, would theirs work with yours?”<br>
+Relacionado con la modularidad de dentro hacia afuera.<br>Principio de la potencia mínima:<br>
+La elección del lenguaje es un criterio de diseño. <br>El extremo de menor potencia suele ser sencillo de diseñar, implementar y utilizar.<br>
+El externo de mayor potencia suele ser atractivo y permitir hacer cualquier cosa, sólo limitado por la imaginación del programador. <br>Al principio, los lenguajes era muy potentes. Hoy en día, se recomienda utilizar el lenguaje menos potente posible. Cuanto menos potente el lenguaje, más se podrá hacer con los datos: “Elegí HTML para que no fuera un lenguaje de programación porque quería que diferentes programas hicieran diferentes cosas con él” (T. Berners-Lee).<br><br>Hablaremos de la arquitectura software, el estilo arquitectónico, el modelo cliente/servidor y la arquitectura en capas.<br><br>En un sentido amplio, la arquitectura del software es el diseño de más alto nivel de la estructura de un sistema, programa y aplicación.<br>Los objetivos de la arquitectura del software son: <br>
+<br>Identificar los módulos principales del sistema, sin considerar aspectos de implementación. 
+<br>Identificar la funcionalidad y responsabilidades de cada módulo.
+<br>Definir las interacciones posibles entre los módulos haciendo uso de mecanismos de control y flujos de datos, secuenciación de información, protocolos de interacción y comunicación, etc.
+<br><img alt="Pasted image 20241126165159.png" src="includes/pasted-image-20241126165159.png"><br>“La arquitectura del software involucra la descripción de los elementos a partir de los cuales se construyen los sistemas, las interacciones entre dichos elementos, patrones que guían en su composición y restricciones sobre esos patrones” Shaw &amp; Garlan.<br><br>En el diseño arquitectónico, se observan ciertas regularidades en la estructura, estilo y elementos utilizados dando respuesta a demandas similares.<br>Estas regularidades recurrentes –tomando nomenclatura de arquitectura civil– se denominan estilos arquitectónicos.<br><img alt="Pasted image 20241126170033.png" src="includes/pasted-image-20241126170033.png"><br>Los estilos arquitectónicos representan formas diferentes de estructurar un sistema usando componentes y conectores, siguiendo decisiones esenciales sobre los elementos arquitectónicos y estableciendo restricciones importantes sobre tales elementos y sus posibles relaciones.<br>Ejemplos: modelo C/S, peer-to-peer, arquitectura en capas…<br><br>En el modelo cliente-servidor (C/S), el sistema se organiza como un conjunto de servicios y servidores asociados, más unos clientes que acceden y utilizan los servicios.<br>Conjunto de servidores que ofrecen servicios a otros subsistemas: servidores de impresión, servidores de archivos, servidores de bases de datos, … <br>Conjunto de clientes que llaman a los servicios ofrecidos por los servidores: o Invocan los servicios ofrecidos por los servidores mediante un protocolo de petición-respuesta (p.ej., HTTP en la WWW) <br>
+<br>Pueden existir varias instancias de un cliente ejecutándose concurrentemente.
+<br>Tienen que conocer los nombres de los servidores disponibles y los servicios que suministran, pero los servidores no conocen a los clientes,
+<br>Básicamente, un cliente realiza una petición y espera hasta recibir la respuesta.
+<br><img alt="Pasted image 20241126170928.png" src="includes/pasted-image-20241126170928.png"><br>Ventajas:<br>
+<br>Flexibilidad, pudiéndose ejecutar sobre distintas plataformas hardware y software.
+<br>Fácil integración de elementos. 
+<br>Fácil mantenimiento local.
+<br>Inconvenientes: <br>
+<br>Difícil mantenimiento a nivel global.
+<br>Los servidores son potenciales cuellos de botella.
+<br>Dificulta el manejo de errores y consistencia de datos si se replican (mirroring).
+<br>Difícil distribución de datos.
+<br>Baja confidencialidad y eficiencia. Empeora si hay duplicidad de datos.
+<br><br>La arquitectura en capas (también denominada arquitectura estratificada) modela la interacción entre los subsistemas organizando un sistema en una serie de capas (layers).<br>Cada capa presta servicios a la capa inmediatamente superior y actúa como cliente de la inferior.<br>Los conectores se definen mediante los protocolos que determinan las formas de la interacción entre cada par de capas. Ejemplo de modelo en capas es TCP/IP.<br>Este estilo soporta el desarrollo incremental de sistemas: <br>
+<br>Cada capa desarrollada queda disponible para los usuarios o para incorporar nuevas capas superiores.
+<br><img alt="Pasted image 20241126171425.png" src="includes/pasted-image-20241126171425.png"><br>Ventajas:<br>
+<br>La arquitectura es cambiable y portable.
+<br>Si la interfaz de una capa se mantiene, la capa es reemplazable por otra.
+<br>Si la interfaz se cambia, sólo se afectará la capa adyacente. 
+<br>Para implementar el sistema en otras computadoras sólo es necesario recodificar las capas internas (más dependientes de la máquina).
+<br><img alt="Pasted image 20241126171746.png" src="includes/pasted-image-20241126171746.png"><br>Inconvenientes:<br>
+<br>Es difícil estructurar los sistemas en capas (p.ej., el usuario puede requerir el acceso a capas internas, como la base de datos, lo que pervierte el modelo).
+<br>El rendimiento puede resultar afectado por los múltiples niveles de interpretación de órdenes y protocolos que se requieren.
+<br><br>En desarrollo web, el estilo C/S en capas es el más utilizado.<br>Se trata de un estilo heterogéneo que mezcla los elementos y reglas de dos o más estilos arquitectónicos puros: <br>
+<br>NO es un estilo arquitectónico por sí mismo  
+<br>El C/S en capas se trata de un sistema jerárquicamente heterogéneo, en el que la arquitectura interna de los componentes de un sistema conforme (servidor) a un cierto estilo (en C/S) sigue un estilo arquitectónico distinto (en capas).<br><img alt="Pasted image 20241126172227.png" src="includes/pasted-image-20241126172227.png"><br><br>El&nbsp;Cloud Computing&nbsp;es un paradigma de la computación que consiste en delegar la misma en terceros. Ofrece muchísimas ventajas al delegar el control y la configuración a otra empresa.<br>El&nbsp;SaaS&nbsp;o&nbsp;Software as a Service&nbsp;es un ejemplo de Cloud Computing que consiste en utilizar una aplicación almacenada y procesada en un servidor remoto, sin tener que instalar nada y recibiendo los resultados de la misma en remoto. Proporciona un modelo de subscripción, asegura la seguridad de los datos, puede escalarse y hace que las aplicaciones sean accesibles desde cualquier dispositivo conectado a internet. Algunos ejemplos de aplicaciones SaaS son Dropbox y Google Drive.<br>El&nbsp;PaaS&nbsp;o&nbsp;Platform as a Service&nbsp;es otro ejemplo de Cloud Computing en el que se ofrece un entorno remoto para desarrollar, gestionar, personalizar y distribuir aplicaciones del cliente. Sus funciones principales son:<br>
+<br>Ofrece un entorno remoto unificado.
+<br>Permite centrarse en el desarrollo en lugar de en la configuración y la infraestructura subyacente.
+<br>El proveedor gestiona la seguridad, los sistemas operativos y demás.
+<br>Facilita la colaboración remota Un ejemplo de aplicación PaaS es Google App Engine.
+<br>El&nbsp;IaaS&nbsp;o&nbsp;Infrastructure as a Servide&nbsp;es el último ejemplo de Cloud Computing que vamos a ver, en el que el proveedor proporciona acceso a infraestructura remota, como servidores, almacenamiento y redes, dejando al cliente usarlos para lo que quiera. Así, la infraestructura es escalable, se ahorra en coste de compra de hardware propio y su manteminiento y se virtualizan las tareas administrativas. Un ejemplo es Amazon Web Services (AWS).<br>(MBC sacados de los apuntes de Javier Gómez Aparicio)<br><br>Estilo arquitectónico en el que las aplicaciones complejas son descompuestas en uno o más servicios. <br>
+<br>A cada servicio se le denomina microservicio.
+<br>Puede desplegarse independientemente del resto.
+<br>Son débilmente acoplados.
+<br>Se focalizan en una única tarea de forma eficaz.
+<br>Son independientes del lenguaje de programación.
+<br>Se comunican mediante APIs (generalmente, API REST).
+<br>Requieren un contexto muy limitado
+<br>"Un microservicio es una unidad de descomposición funcional de un sistema en un servicio gestionable e independientemente desplegable"<br>Pequeños y focalizados <br>
+<br>Regla de las 2 pizzas 
+<br>Tratados como una aplicación o producto independiente 
+<br>La granularidad depende de las necesidades del negocio
+<br><img alt="Pasted image 20241126175256.png" src="includes/pasted-image-20241126175256.png"><br>Despliegue ”zero coordination” <br>Un MS no conoce la implementación de base ni la de otros MS vecinos (ni siquiera de su existencia) <br>Se pueden ejecutar múltiples copias de un MS en distintas máquinas<br>NO es el estilo adecuado para comenzar una aplicación <br>
+<br>Solución a problemas de escalabilidad, no para nuevos diseños 
+<br>El despliegue debe externalizarse.<br><img alt="Pasted image 20241126185702.png" src="includes/pasted-image-20241126185702.png">]]></description><link>6.-principios-de-diseño-y-arquitectura.html</link><guid isPermaLink="false">6. Principios de Diseño y Arquitectura.md</guid><pubDate>Tue, 26 Nov 2024 17:57:03 GMT</pubDate><enclosure url="includes/pasted-image-20241126164312.png" length="0" type="image/png"/><content:encoded>&lt;figure&gt;&lt;img src=&quot;includes/pasted-image-20241126164312.png&quot;&gt;&lt;/figure&gt;</content:encoded></item><item><title><![CDATA[index]]></title><description><![CDATA[ 
  <br><br>
 <br><a data-href="2. Fundamentos de Internet" href="2.-fundamentos-de-internet.html" class="internal-link" target="_self" rel="noopener nofollow">2. Fundamentos de Internet</a>
 <br><a data-href="3. Tipología de la Web" href="3.-tipología-de-la-web.html" class="internal-link" target="_self" rel="noopener nofollow">3. Tipología de la Web</a>
 <br><a data-href="4. Marcos Tecnológicos" href="4.-marcos-tecnológicos.html" class="internal-link" target="_self" rel="noopener nofollow">4. Marcos Tecnológicos</a>
 <br><a data-href="5. Lenguajes para la Web" href="5.-lenguajes-para-la-web.html" class="internal-link" target="_self" rel="noopener nofollow">5. Lenguajes para la Web</a>
-]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Mon, 25 Nov 2024 19:00:49 GMT</pubDate></item></channel></rss>
+<br><a data-href="6. Principios de Diseño y Arquitectura" href="6.-principios-de-diseño-y-arquitectura.html" class="internal-link" target="_self" rel="noopener nofollow">6. Principios de Diseño y Arquitectura</a>
+]]></description><link>index.html</link><guid isPermaLink="false">index.md</guid><pubDate>Tue, 26 Nov 2024 15:28:56 GMT</pubDate></item></channel></rss>
